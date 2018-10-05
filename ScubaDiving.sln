@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScubaDiving", "Assembly-CSharp.csproj", "{01C98EAA-3E62-9D62-D684-D924E689977A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScubaDiving", "Assembly-CSharp-firstpass.csproj", "{0FE2D2B5-BD5A-49C1-2621-8069EE92FFDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScubaDiving", "Assembly-CSharp-Editor-firstpass.csproj", "{B7DEF619-B1E3-1DE8-0ECB-7E2CBB27E953}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01C98EAA-3E62-9D62-D684-D924E689977A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C98EAA-3E62-9D62-D684-D924E689977A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C98EAA-3E62-9D62-D684-D924E689977A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C98EAA-3E62-9D62-D684-D924E689977A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE2D2B5-BD5A-49C1-2621-8069EE92FFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE2D2B5-BD5A-49C1-2621-8069EE92FFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE2D2B5-BD5A-49C1-2621-8069EE92FFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE2D2B5-BD5A-49C1-2621-8069EE92FFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7DEF619-B1E3-1DE8-0ECB-7E2CBB27E953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7DEF619-B1E3-1DE8-0ECB-7E2CBB27E953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7DEF619-B1E3-1DE8-0ECB-7E2CBB27E953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7DEF619-B1E3-1DE8-0ECB-7E2CBB27E953}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
