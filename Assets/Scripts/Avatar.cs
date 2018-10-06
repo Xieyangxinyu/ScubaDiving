@@ -1,21 +1,23 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.XR;
 
 public class Avatar : MonoBehaviour
 {
     private Camera m_Camera;
-    private CharacterController m_CharacterController;
 	public Boundary boundary;
+    // Read inputs from VR and trackpad.
 	[SerializeField] private InputC m_MouseLook;
 
     //FirstPerson moving spead
     private float speed;
+	private const float INIT_SPEED = 5f;
 	private bool dead;
+	private const int FROZEN_TIME = 10;
 	private float deadtime;
 
+	// die() is called once shark get the user
 	public void die(){
 		deadtime = Time.time;
 		dead = true;
@@ -26,34 +28,35 @@ public class Avatar : MonoBehaviour
     {
 		//Initial set-up
 		transform.position = boundary.randomPosition();
-        m_CharacterController = GetComponent<CharacterController>();
         m_Camera = Camera.main;
-		speed = 10f;
+		speed = INIT_SPEED;
         m_MouseLook.Init(transform, m_Camera.transform);
     }
 
+	// stop() is called once over the border
 	private void stop(){
-		speed *= -1;
+		speed = 0.5f;
 	}
 
     private void Update()
     {
 		if (dead) {
-			if (deadtime + 10 < Time.time)
-				dead = false;
-			return;
+			// Once the shark get the user, user will be freezed for 10sec 
+			if (deadtime + FROZEN_TIME < Time.time)
+				dead = false; // Revived from death
+			else return;
 		}
 		RotateView();
 
-		//Boundaries of limited swimming spaces
-		if (!boundary.inBound(transform.position))
-			stop();
-		else if (speed < 0) speed = 10f;
+		Vector3 moveDirection = transform.forward;
+        // over the border
+		if (!boundary.inBound(transform.position)) stop();
+        // let the user back into the boundary with double speed at the current direction 
+		if(boundary.inBound(10f * moveDirection * Time.fixedDeltaTime + transform.position)) speed = INIT_SPEED;
 
         //Derection setup
-		Vector3 moveDirection = transform.forward;
 		moveDirection.y = m_Camera.transform.forward.y;
-		m_CharacterController.Move(speed * moveDirection * Time.fixedDeltaTime);
+		transform.position += speed * moveDirection * Time.fixedDeltaTime;
 		m_MouseLook.UpdateCursorLock();
     }
 

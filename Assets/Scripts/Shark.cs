@@ -15,7 +15,7 @@ public class Shark : MonoBehaviour {
 	public void setShark(Avatar target) {
 		anim = GetComponent<Animation>();
         scream = GetComponent<AudioSource>();
-        moveSpeed = 5f;
+        moveSpeed = 2f;
 		this.target = target;
 	}
 
@@ -34,11 +34,11 @@ public class Shark : MonoBehaviour {
 			anim.CrossFade ("eat");
 		}
 		else if(distance < 500){
-			moveSpeed = 10f;
+			moveSpeed = 3f;
 			anim.CrossFade ("fastswim");
 		}
 		else {
-			moveSpeed = 5f;
+			moveSpeed = 2f;
 			anim.CrossFade ("swim");
 		}
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetR), rotationSpeed * Time.deltaTime);

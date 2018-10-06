@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Boundary : MonoBehaviour {
 
-	private int originX = 200, originY = 2, originZ = 200;
-	private int boundaryX = 300, boundaryY = 40, boundaryZ = 300;
+	private int originX = 100, originY = 2, originZ = 100;
+	private int boundaryX = 350, boundaryY = 40, boundaryZ = 350;
 
 	private Vector3 randomPos = new Vector3();
 
