@@ -14,9 +14,11 @@ public class Bubble : MonoBehaviour {
 		lifeCycle = Random.Range(100f, 150f);
 		this.boundary = boundary;
 		lifeTime = Time.time;
+		// Instantiate returns fish Object the instantiated clone.
 		Instantiate(fish, transform.position, Quaternion.identity).transform.SetParent(this.transform);
 	}
 
+	// positionSwap() is called once the bubble is expired
 	private void positionSwap(){
 		transform.position = boundary.randomPosition();
 		lifeTime = Time.time;

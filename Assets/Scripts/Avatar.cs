@@ -34,7 +34,8 @@ public class Avatar : MonoBehaviour
     }
 
 	// stop() is called once over the border
-	private void stop(){
+	private void stop()
+	{
 		speed = 0.5f;
 	}
 
@@ -51,8 +52,9 @@ public class Avatar : MonoBehaviour
 		Vector3 moveDirection = transform.forward;
         // over the border
 		if (!boundary.inBound(transform.position)) stop();
-        // let the user back into the boundary with double speed at the current direction 
-		if(boundary.inBound(10f * moveDirection * Time.fixedDeltaTime + transform.position)) speed = INIT_SPEED;
+        // set user's speed to the initial speed
+		// if the user could be back into the boundary with double initial speed at the current direction 
+		if(boundary.inBound(2 * INIT_SPEED * moveDirection * Time.fixedDeltaTime + transform.position)) speed = INIT_SPEED;
 
         //Derection setup
 		moveDirection.y = m_Camera.transform.forward.y;

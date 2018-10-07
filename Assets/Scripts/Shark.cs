@@ -11,7 +11,10 @@ public class Shark : MonoBehaviour {
 	private float moveSpeed;
 	public Animation anim;
 	private Vector3 targetR;
+	private const int EAT = 15; // Distance to eat
+	private const int FAST = 500; // Distance to accelerate
 
+    // initialize the shark following the Avatar
 	public void setShark(Avatar target) {
 		anim = GetComponent<Animation>();
         scream = GetComponent<AudioSource>();
@@ -23,6 +26,7 @@ public class Shark : MonoBehaviour {
 	void Update () {
 		
 		if (scream.isPlaying) {
+			// the shark got the Avatar
 			return;
 		}
 
@@ -30,10 +34,10 @@ public class Shark : MonoBehaviour {
 
 		float distance = targetR.x * targetR.x + targetR.y * targetR.y + targetR.z * targetR.z;
 
-		if (distance < 15) {
+		if (distance < EAT) {
 			anim.CrossFade ("eat");
 		}
-		else if(distance < 500){
+		else if(distance < FAST){
 			moveSpeed = 3f;
 			anim.CrossFade ("fastswim");
 		}
@@ -42,10 +46,12 @@ public class Shark : MonoBehaviour {
 			anim.CrossFade ("swim");
 		}
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetR), rotationSpeed * Time.deltaTime);
-		transform.position += transform.forward * Time.deltaTime * moveSpeed;
+		Vector3 velocity = transform.forward * moveSpeed;
+		transform.position += velocity * Time.deltaTime;
 	}
+    
 	void OnTriggerEnter(Collider hit){
-		//if the bubble hits the FirstPerson
+		// check if the shark hits the FirstPerson
 		if (hit.tag == "Player") {
 			scream.Play ();
 			target.die();
