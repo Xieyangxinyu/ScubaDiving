@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boundary : MonoBehaviour {
 
 	private int originX = 100, originY = 2, originZ = 100;
-	private int boundaryX = 350, boundaryY = 40, boundaryZ = 350;
+	private int boundaryX = 200, boundaryY = 40, boundaryZ = 200;
 
 	private Vector3 randomPos = new Vector3();
 
