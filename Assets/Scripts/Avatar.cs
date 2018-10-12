@@ -14,13 +14,14 @@ public class Avatar : MonoBehaviour
     private float speed;
 	private const float INIT_SPEED = 5f;
 	private bool dead;
-	private const int FROZEN_TIME = 10;
+	private const int FROZEN_TIME = 1;
 	private float deadtime;
 
 	// die() is called once shark get the user
 	public void die(){
 		deadtime = Time.time;
-		dead = true;
+        this.transform.position = new Vector3(125f, 35f, 125f);
+        dead = true;
 	}
 
     // Use this for initialization
@@ -42,8 +43,9 @@ public class Avatar : MonoBehaviour
     private void Update()
     {
 		if (dead) {
-			// Once the shark get the user, user will be freezed for 10sec 
+			// Once the shark get the user, user will be freezed for 1sec 
 			if (deadtime + FROZEN_TIME < Time.time)
+
 				dead = false; // Revived from death
 			else return;
 		}
