@@ -1,0 +1,17 @@
+# Studying Spatial Navigation of 3D Virtual Environments
+
+### Yangxinyu Xie, Ricardo J Velásquez, Jacob M Quinn, Jiayi Zhou
+### Zoltan Nadasdy, Ph.D (University of Texas at Austin)
+### Darrell Haufler, Ph.D (Rutgers University)
+
+## Introduction: 
+Do we navigate in 3D as well as we do in 2D? Animals are biologically programmed to master navigation. Human beings, mainly navigating in a 2D plane, possess well-developed 2D cognitive maps. Our team was one of the first to gain insight into the neuronal underpinning of cognitive maps by directly recording neurons from human brains. This method enables us to determine the dimensionality of cognitive maps represented by the activity of neurons in the human brain.  Our goal was to develop virtual reality environments and to test different navigation models in the human brain through simulated spatial navigation tasks, which are also compatible with clinical environments.
+
+## Methods:
+For human beings, scuba diving, unconstrained by gravity, is one of the most natural 3D experiences. High-performance virtual reality is the ideal testing environment because experimental subjects are restricted in movements to a hospital bed due to electrodes implanted in their brain. Oculus Rift and HTC Vive render subjects to the 3D immersive experience so that they produce responses within brains as if they are in a real free-movement environment. We utilized Unity Game Engine, constructing underwater spaces with game elements such as sharks, corals, stones, and bubbles. We setted an avatar at a constant speed and created a turning system for free movement to any direction. We built in a reward system -- players obtain "points" by popping randomly distributed bubbles in the virtual space. All these settings encourage subjects to actively and purposely navigate themselves. To distinguish the roles of visible vs. internal landmarks during navigation, we implemented two virtual environments: a swimming pool with visibly vertical walls and a visually boundless ocean. 
+
+## Results: 
+Based on the experiment conducted at the Dell-Seton Medical Center at the University of Texas in April 2018, we validated that our virtual reality simulation generated a fully immersive experience of scuba diving while it imposed no risk of interfering with other clinical procedures.  During the simulation process, the position and direction of the avatar was recorded on a millisecond basis, along with the corresponding neuronal signals. We also observed minor nausea from patients, which could immediately be alleviated by switching to a laptop display navigation, with a comparable experience. Now, after the experiment, we are able to replay the experiment from the subject’s point of view and also fully recover the navigation path and all the details of the interaction with the environment. Our pilot test proved that the experiment is ready for systematic data collection with concurrent electrophysiology data to elucidate human spatial navigational behavior in 3D space.
+
+## Conclusion: 
+The current prototype of simulation has shown its robustness and effectiveness in creating 3D spatial navigation experiences which would otherwise be difficult to implement in real life. This virtual reality approach to the investigation of spatial memory and direction in human brains is ready for further challenges. NASA is training astronauts for long-term space travels and our brain's adaptation to the 3D environment without gravity is a highly relevant question.  
