@@ -5,7 +5,7 @@
 
 <p>In this project, we build a virtual scubadiving experience using Unity 3D. The project has been tested to be compatible with Oculus Rift and HTC Vive. </p>
 
-<p> To learn more about our research project, see the following links. </p>
+To learn more about our research project,
 
  - Read our [project abstract](https://github.com/Xieyangxinyu/ScubaDiving/tree/master/Abstract) on Capital of Texas Undergraduate Research Conference.
  - Watch our [Texas Student Research Showdown Video](https://www.youtube.com/watch?v=_50E9YZ02-Q&feature=youtu.be).
