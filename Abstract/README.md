@@ -1,8 +1,8 @@
 # Studying Spatial Navigation of 3D Virtual Environments
 
-### Yangxinyu Xie, Ricardo J Velásquez, Jacob M Quinn, Jiayi Zhou
-### Zoltan Nadasdy, Ph.D (University of Texas at Austin)
-### Darrell Haufler, Ph.D (Rutgers University)
+#### Yangxinyu Xie, Ricardo J Velásquez, Jacob M Quinn, Jiayi Zhou
+#### Zoltan Nadasdy, Ph.D (University of Texas at Austin)
+#### Darrell Haufler, Ph.D (Rutgers University)
 
 ## Introduction: 
 Do we navigate in 3D as well as we do in 2D? Animals are biologically programmed to master navigation. Human beings, mainly navigating in a 2D plane, possess well-developed 2D cognitive maps. Our team was one of the first to gain insight into the neuronal underpinning of cognitive maps by directly recording neurons from human brains. This method enables us to determine the dimensionality of cognitive maps represented by the activity of neurons in the human brain.  Our goal was to develop virtual reality environments and to test different navigation models in the human brain through simulated spatial navigation tasks, which are also compatible with clinical environments.
