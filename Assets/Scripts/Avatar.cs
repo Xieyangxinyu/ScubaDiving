@@ -2,11 +2,13 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class Avatar : MonoBehaviour
 {
     private Camera m_Camera;
 	public Boundary boundary;
+    public Text count;
     // Read inputs from VR and trackpad.
 	[SerializeField] private InputC m_MouseLook;
 
@@ -16,6 +18,7 @@ public class Avatar : MonoBehaviour
 	private bool dead;
 	private const int FROZEN_TIME = 1;
 	private float deadtime;
+    private int bubbleCount = 0;
 
 	// die() is called once shark get the user
 	public void die(){
@@ -42,6 +45,11 @@ public class Avatar : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
 		if (dead) {
 			// Once the shark get the user, user will be freezed for 1sec 
 			if (deadtime + FROZEN_TIME < Time.time)
@@ -67,5 +75,14 @@ public class Avatar : MonoBehaviour
     //Rotate View by reading inputs from VR headset or Trackpad
     private void RotateView(){
         m_MouseLook.LookRotation(transform, m_Camera.transform);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "bubble")
+        {
+            bubbleCount ++;
+            count.text = "Count:" + bubbleCount.ToString();
+        }
     }
 }
