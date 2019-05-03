@@ -13,9 +13,10 @@ public class Shark : MonoBehaviour {
 	private Vector3 targetR;
 	private const int EAT = 15; // Distance to eat
 	private const int FAST = 500; // Distance to accelerate
+    private const int SLOW = 250; // Distance to accelerate
 
     // initialize the shark following the Avatar
-	public void setShark(Avatar target) {
+    public void setShark(Avatar target) {
 		anim = GetComponent<Animation>();
         scream = GetComponent<AudioSource>();
         moveSpeed = 2f;
@@ -37,12 +38,12 @@ public class Shark : MonoBehaviour {
 		if (distance < EAT) {
 			anim.CrossFade ("eat");
 		}
-		else if(distance < FAST){
+		else if(distance < FAST && distance > SLOW){
 			moveSpeed = 3f;
 			anim.CrossFade ("fastswim");
 		}
-		else {
-			moveSpeed = 2f;
+        else{
+			moveSpeed = 1f;
 			anim.CrossFade ("swim");
 		}
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetR), rotationSpeed * Time.deltaTime);

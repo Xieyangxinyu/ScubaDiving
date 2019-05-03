@@ -81,8 +81,8 @@ public class Avatar : MonoBehaviour
     {
         if(other.tag == "bubble")
         {
-            bubbleCount ++;
-            count.text = "Count:" + bubbleCount.ToString();
+            ++bubbleCount;
+            count.text = String.Concat("Count: ", bubbleCount.ToString());
         }
     }
 }

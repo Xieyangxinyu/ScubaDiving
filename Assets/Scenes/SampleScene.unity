@@ -2247,7 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundary: {fileID: 114605581735624716, guid: e6ffbe8f5bfe040be8afb6ba9d8d47f3, type: 3}
-  count: {fileID: 0}
+  count: {fileID: 1396711426}
   m_MouseLook:
     XSensitivity: 2
     YSensitivity: 2

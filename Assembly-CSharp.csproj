@@ -69,6 +69,38 @@
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\Underwater.cs" />
     <Compile Include="Assets\Scripts\WhitePage.cs" />
+    <Compile Include="Assets\TobiiPro\Common\Scripts\CalibrationThread.cs" />
+    <Compile Include="Assets\TobiiPro\Common\Scripts\Data\UserPositionGuideData.cs" />
+    <Compile Include="Assets\TobiiPro\Common\Scripts\ExtensionMethods.cs" />
+    <Compile Include="Assets\TobiiPro\Common\Scripts\EyeTrackerBase.cs" />
+    <Compile Include="Assets\TobiiPro\Common\Scripts\GazeTrailBase.cs" />
+    <Compile Include="Assets\TobiiPro\Common\Scripts\IUserPositionGuideData.cs" />
+    <Compile Include="Assets\TobiiPro\Examples\ScreenBased\Scripts\ScreenBasedPrefabDemo.cs" />
+    <Compile Include="Assets\TobiiPro\Examples\SubscribingToGazeData.cs" />
+    <Compile Include="Assets\TobiiPro\Examples\SubscribingToHMDGazeData.cs" />
+    <Compile Include="Assets\TobiiPro\Examples\SubscribingToUserPositionGuide.cs" />
+    <Compile Include="Assets\TobiiPro\Examples\VRDemo\Scripts\TobiiControl.cs" />
+    <Compile Include="Assets\TobiiPro\Examples\VRDemo\Scripts\VRPrefabDemo.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\Data\GazeData.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\EyeTracker.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\IGazeData.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\IGazeDataEye.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\Utility\Calibration.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\Utility\CalibrationPoint.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\Utility\GazeTrail.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\Utility\ScreenBasedSaveData.cs" />
+    <Compile Include="Assets\TobiiPro\ScreenBased\Scripts\Utility\TrackBoxGuide.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Data\VRGazeData.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\IVRGazeData.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\IVRGazeDataEye.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Utility\VRCalibration.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Utility\VRCalibrationPoint.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Utility\VRGazeTrail.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Utility\VRPositioningGuide.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Utility\VRPositioningPlacementCanvas.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Utility\VRSaveData.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\Utility\VRUtility.cs" />
+    <Compile Include="Assets\TobiiPro\VR\Scripts\VREyeTracker.cs" />
     <Compile Include="Assets\Underwater Plants v2\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
     <Compile Include="Assets\Underwater Plants v2\Environment\Water\Water\Scripts\Displace.cs" />
     <Compile Include="Assets\Underwater Plants v2\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
@@ -78,26 +110,33 @@
     <Compile Include="Assets\Underwater Plants v2\Environment\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\Underwater Plants v2\Environment\Water\Water\Scripts\WaterBase.cs" />
     <Compile Include="Assets\Underwater Plants v2\Environment\Water\Water\Scripts\WaterTile.cs" />
+    <None Include="Assets\TobiiPro\VR\readme.txt" />
+    <None Include="Assets\TobiiPro\Examples\VRDemo\Scenes\readme.txt" />
+    <None Include="Assets\TobiiPro\Examples\PrefabDemo\readme.txt" />
     <None Include="Assets\Underwater Plants v2\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+    <None Include="Assets\TobiiPro\ScreenBased\readme.txt" />
+    <None Include="Assets\TobiiPro\Examples\VRDemo\readme.txt" />
     <None Include="Assets\Underwater_FX\Shaders\AlphaSelfIllum_NoFog.shader" />
     <None Include="Assets\Underwater Plants v2\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+    <None Include="Assets\TobiiPro\tobii_pro_prefabs.txt" />
     <None Include="Assets\Underwater Plants v2\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+    <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Underwater Plants v2\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
     <None Include="Assets\Underwater Plants v2\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -300,17 +339,20 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Tobii.Research.Mono">
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Assets/TobiiPro/Plugins/Tobii.Research.Mono.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>C:/Users/znada/Desktop/ScubaDiving/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/znada/Desktop/Scuba Diving/Unity Project/Scuba Diving/ScubaDiving/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
